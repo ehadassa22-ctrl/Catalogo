@@ -1,0 +1,472 @@
+/* ==============================
+   CONFIGURAÇÕES GERAIS
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --amarelo: #F6E7A1;
+    --amarelo-claro: #FFF8D9;
+    --bordo: #681F32;
+    --bordo-escuro: #481321;
+    --verde: #A8D928;
+    --verde-escuro: #7FAE12;
+    --branco: #FFFFFF;
+    --texto: #33272A;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--amarelo-claro);
+    color: var(--texto);
+}
+
+
+/* ==============================
+   CABEÇALHO
+================================ */
+
+header {
+    height: 80px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: var(--bordo);
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+}
+
+.logo {
+    color: var(--amarelo);
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.logo::after {
+    content: "";
+    display: block;
+
+    width: 35px;
+    height: 4px;
+
+    margin-top: 5px;
+
+    background-color: var(--verde);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--verde);
+}
+
+
+/* ==============================
+   INTRODUÇÃO
+================================ */
+
+main {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: auto;
+}
+
+.introducao {
+    text-align: center;
+
+    padding: 75px 20px 45px;
+}
+
+.subtitulo {
+    color: var(--bordo);
+
+    font-size: 13px;
+    font-weight: bold;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 42px;
+
+    color: var(--bordo);
+
+    margin-bottom: 18px;
+}
+
+.linha-decorativa {
+    width: 70px;
+    height: 5px;
+
+    margin: auto;
+
+    background-color: var(--verde);
+
+    border-radius: 20px;
+}
+
+.descricao {
+    max-width: 600px;
+
+    margin: 20px auto 0;
+
+    line-height: 1.7;
+
+    color: #66595C;
+}
+
+
+/* ==============================
+   CARDS
+================================ */
+
+.categorias {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px;
+
+    padding-bottom: 80px;
+}
+
+.card {
+    display: flex;
+
+    min-height: 300px;
+
+    background-color: var(--branco);
+
+    border-radius: 22px;
+
+    overflow: hidden;
+
+    box-shadow: 0 10px 30px rgba(104,31,50,0.12);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 18px 40px rgba(104,31,50,0.22);
+}
+
+
+/* ==============================
+   IMAGENS
+================================ */
+
+.imagem-container {
+    width: 48%;
+
+    min-height: 300px;
+
+    overflow: hidden;
+
+    background-color: #eee;
+}
+
+.imagem-container img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.5s ease;
+}
+
+.card:hover .imagem-container img {
+    transform: scale(1.07);
+}
+
+
+/* ==============================
+   CONTEÚDO DO CARD
+================================ */
+
+.card-conteudo {
+    width: 52%;
+
+    padding: 30px 25px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.numero {
+    color: var(--verde-escuro);
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+}
+
+.card h2 {
+    color: var(--bordo);
+
+    font-size: 25px;
+
+    line-height: 1.15;
+
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #76686C;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    margin-bottom: 22px;
+}
+
+
+/* ==============================
+   BOTÃO
+================================ */
+
+.botao {
+    width: fit-content;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 12px 18px;
+
+    background-color: var(--bordo);
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+.botao span {
+    color: var(--verde);
+
+    font-size: 18px;
+
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background-color: var(--bordo-escuro);
+
+    transform: translateX(3px);
+}
+
+.botao:hover span {
+    transform: translateX(5px);
+}
+
+
+/* ==============================
+   RODAPÉ
+================================ */
+
+footer {
+    background-color: var(--bordo);
+
+    color: white;
+
+    text-align: center;
+
+    padding: 40px 20px;
+}
+
+.footer-logo {
+    color: var(--amarelo);
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 12px;
+}
+
+footer p {
+    color: #eadde0;
+
+    margin-bottom: 15px;
+}
+
+footer span {
+    color: #c9b6bb;
+
+    font-size: 12px;
+}
+
+
+/* ==============================
+   ANIMAÇÃO
+================================ */
+
+.card {
+    opacity: 0;
+
+    transform: translateY(25px);
+
+    animation: aparecer 0.7s ease forwards;
+}
+
+.card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ==============================
+   CELULAR
+================================ */
+
+@media (max-width: 800px) {
+
+    header {
+        padding: 0 5%;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .categorias {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        min-height: 260px;
+    }
+
+    .imagem-container {
+        min-height: 260px;
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .introducao {
+        padding-top: 50px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .card {
+        flex-direction: column;
+    }
+
+    .imagem-container {
+        width: 100%;
+        height: 220px;
+        min-height: 220px;
+    }
+
+    .card-conteudo {
+        width: 100%;
+        padding: 25px;
+    }
+
+}
+.produto{
+    width: 300px;
+    margin: 30px auto;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,.15);
+}
+
+.produto img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.produto h3{
+    margin: 15px 0;
+}
+
+.produto p{
+    padding: 0 15px;
+}
+
+.produto button{
+    margin: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
